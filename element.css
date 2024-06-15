@@ -1,0 +1,23 @@
+/* /* div {
+    text-align: center;
+} */
+ /* *{
+    font-family: Arial, Helvetica, sans-serif;
+ } */ 
+  /* h1,.center-paragraph,p{
+    text-align: center;
+    color: brown;
+  }
+  */
+  /* div p{
+    background-color: yellow;
+  }
+  div > p{
+    background-color: aqua;
+  } */
+   /* div + p {
+    background-color: bisque;
+   } */
+div ~ p:hover{
+    background-color: yellow;
+}
