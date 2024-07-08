@@ -1,0 +1,41 @@
+import {createContext} from "react";
+
+const TaskContext = createContext();
+const TaskProvider = ({children}) =>{
+  const [taskList, setTask List = useState([]);
+  const addNewTask = (task) => {
+    setTaskList([...taskList, {...task, createdDate: new Date()}]);
+  };
+  return {
+    <TaskContext.Provider value{{taskList, addNewTask}}>
+    {children}
+    </TaskContext.Provider>
+  }
+};
+
+export {TaskProvider};
+export default  TaskContent;
+
+import AddTask from "./components/AddTask";
+import ToDoScreen from "./screens/ToDoScreen";
+import {createBrowserRouterBrowserRouter([
+  {
+    path: "/";
+    element: <ToDoScreen taskList={taskList} />,
+  },
+  {
+    path: "/add-task";
+    element: <Add Task onSubmit={addNewTask} />,
+  },
+]);
+  const App = () =>{
+    return (
+      <TaskProvider></TaskProvider>
+      <RouterProvider router{router} />;
+      </TaskProvider>
+    );
+  }
+  
+};
+
+export default App;
