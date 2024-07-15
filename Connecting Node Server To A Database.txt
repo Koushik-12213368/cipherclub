@@ -1,0 +1,12 @@
+const {connect} = require("mongoose");
+const MONGO_URL= "mongodb+srv://barpaggaanamika08:barpaggaanamika08@cluster0.mxrscog.mongodb.net";
+const DB_NAME="cs-mern";
+function connectDb(){
+  try{
+    connect('${MONGO_URL}/${DB_NAME}');
+    console.log("MongoDb connected.");
+  }catch(err){
+    console.error(err);
+  }
+}
+constDb();
